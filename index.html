@@ -34,7 +34,16 @@
         h1 {
             text-align: center;
             margin: 0;
-            font-size: 24px;
+            font-size: 32px; /* Increased from 24px */
+            font-weight: 600;
+        }
+
+        .hint-text {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
         }
 
         /* Grid Container */
@@ -49,17 +58,19 @@
 
         /* Box Styling */
         .box {
-            aspect-ratio: 1 / 1;        /* Makes box square */
-            display: flex;              /* Enables flexbox */
-            justify-content: center;    /* Horizontal center */
-            align-items: center;        /* Vertical center */
-            text-align: center;         /* Text alignment */
+            aspect-ratio: 2 / 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             padding: 20px;
             text-decoration: none;
             color: black;
             border-radius: 8px;
-            transition: filter 0.2s;
-            font-weight: 500;
+            font-size: 18px; /* Increased font size */
+            font-weight: 600; /* Slightly bolder */
+            cursor: pointer; /* Shows hand cursor */
+            transition: all 0.2s ease; /* Smooth animation */
         }
 
         /* Individual Box Colors */
@@ -68,9 +79,17 @@
         .box:nth-child(3) { background-color: #BBDEFB; } /* Light Blue */
         .box:nth-child(4) { background-color: #C8E6C9; } /* Light Green */
 
-        /* Hover Effect */
+        /* Hover Effect - Lift & Shadow */
         .box:hover {
-            filter: brightness(0.92); /* Slightly darker on hover */
+            transform: translateY(-5px); /* Box rises up */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Adds shadow */
+            filter: brightness(0.95); /* Slightly darker */
+        }
+
+        /* Active state (when clicked) */
+        .box:active {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
         }
 
         footer {
@@ -87,7 +106,10 @@
                 grid-template-columns: 1fr;
             }
             h1 {
-                font-size: 20px;
+                font-size: 26px;
+            }
+            .box {
+                font-size: 16px;
             }
         }
     </style>
@@ -97,6 +119,7 @@
         <img src="https://covid19.sph.hku.hk/images/hkusph_b.png" alt="HKU SPH Logo" class="logo">
         <div class="header-divider"></div>
         <h1>Osteoarthritis Online Resources</h1>
+        <p class="hint-text">Click on a resource below to learn more</p>
     </div>
 
     <div class="container">
