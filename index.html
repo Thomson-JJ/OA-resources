@@ -13,16 +13,47 @@
 
         /* Header Layout */
         .header {
-            display: flex;
-            flex-direction: column;
             padding: 20px;
             margin-bottom: 20px;
         }
 
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
         .logo {
             height: 60px;
-            align-self: flex-start;
-            margin-bottom: 10px;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+        }
+
+        .lang-btn {
+            text-decoration: none;
+            color: #333;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #f0f0f0;
+            border-color: #999;
+        }
+
+        .lang-btn.active {
+            background-color: #333;
+            color: white;
+            border-color: #333;
+            cursor: default;
         }
 
         .header-divider {
@@ -34,13 +65,13 @@
         h1 {
             text-align: center;
             margin: 0;
-            font-size: 36px; /* Increased from 24px */
+            font-size: 32px;
             font-weight: 600;
         }
 
         .hint-text {
             text-align: center;
-            font-size: 28px;
+            font-size: 14px;
             color: #666;
             margin-top: 8px;
             font-style: italic;
@@ -56,9 +87,8 @@
             padding: 0 20px;
         }
 
-        /* Box Styling */
         .box {
-            aspect-ratio: 2 / 1;
+            aspect-ratio: 1 / 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -67,26 +97,23 @@
             text-decoration: none;
             color: black;
             border-radius: 8px;
-            font-size: 32px; /* Increased font size */
-            font-weight: 600; /* Slightly bolder */
-            cursor: pointer; /* Shows hand cursor */
-            transition: all 0.2s ease; /* Smooth animation */
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        /* Individual Box Colors */
-        .box:nth-child(1) { background-color: #FFF9C4; } /* Light Yellow */
-        .box:nth-child(2) { background-color: #FFCDD2; } /* Light Pink */
-        .box:nth-child(3) { background-color: #BBDEFB; } /* Light Blue */
-        .box:nth-child(4) { background-color: #C8E6C9; } /* Light Green */
+        .box:nth-child(1) { background-color: #FFF9C4; }
+        .box:nth-child(2) { background-color: #FFCDD2; }
+        .box:nth-child(3) { background-color: #BBDEFB; }
+        .box:nth-child(4) { background-color: #C8E6C9; }
 
-        /* Hover Effect - Lift & Shadow */
         .box:hover {
-            transform: translateY(-5px); /* Box rises up */
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Adds shadow */
-            filter: brightness(0.95); /* Slightly darker */
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            filter: brightness(0.95);
         }
 
-        /* Active state (when clicked) */
         .box:active {
             transform: translateY(-2px);
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
@@ -100,7 +127,6 @@
             padding-bottom: 20px;
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 600px) {
             .container {
                 grid-template-columns: 1fr;
@@ -111,12 +137,23 @@
             .box {
                 font-size: 16px;
             }
+            .header-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="https://covid19.sph.hku.hk/images/hkusph_b.png" alt="HKU SPH Logo" class="logo">
+        <div class="header-row">
+            <img src="https://covid19.sph.hku.hk/images/hkusph_b.png" alt="HKU SPH Logo" class="logo">
+            <div class="lang-switch">
+                <span class="lang-btn active">Eng</span>
+                <a href="zh.html" class="lang-btn">中</a>
+            </div>
+        </div>
         <div class="header-divider"></div>
         <h1>Osteoarthritis Online Resources</h1>
         <p class="hint-text">Click on a resource below to learn more</p>
