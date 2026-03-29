@@ -7,115 +7,103 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
         }
 
+        /* Header Layout */
         .header {
-            width: 100%;
-        }
-
-        .logo-row {
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
         .logo {
             height: 60px;
+            align-self: flex-start;
+            margin-bottom: 10px;
         }
 
-        .divider {
-            border-top: 1px solid #ccc;
-            margin: 12px 0 18px 0;
+        .header-divider {
             width: 100%;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 15px;
         }
 
-        .title {
+        h1 {
             text-align: center;
-            margin: 0 0 20px 0;
+            margin: 0;
+            font-size: 24px;
         }
 
+        /* Grid Container */
         .container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            margin: 20px 0;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 0 20px;
         }
 
+        /* Box Styling */
         .box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            aspect-ratio: 1 / 1;   /* makes the box square */
-            border: 1px solid #ccc;
+            aspect-ratio: 1 / 1;        /* Makes box square */
+            display: flex;              /* Enables flexbox */
+            justify-content: center;    /* Horizontal center */
+            align-items: center;        /* Vertical center */
+            text-align: center;         /* Text alignment */
+            padding: 20px;
             text-decoration: none;
             color: black;
             border-radius: 8px;
-            text-align: center;
-            padding: 15px;
-            font-weight: bold;
-            box-sizing: border-box;
+            transition: filter 0.2s;
+            font-weight: 500;
         }
 
-        /* Box colors */
-        .yellow {
-            background-color: #fff9c4;
-        }
+        /* Individual Box Colors */
+        .box:nth-child(1) { background-color: #FFF9C4; } /* Light Yellow */
+        .box:nth-child(2) { background-color: #FFCDD2; } /* Light Pink */
+        .box:nth-child(3) { background-color: #BBDEFB; } /* Light Blue */
+        .box:nth-child(4) { background-color: #C8E6C9; } /* Light Green */
 
-        .pink {
-            background-color: #f8bbd0;
-        }
-
-        .blue {
-            background-color: #bbdefb;
-        }
-
-        .green {
-            background-color: #c8e6c9;
+        /* Hover Effect */
+        .box:hover {
+            filter: brightness(0.92); /* Slightly darker on hover */
         }
 
         footer {
-            margin-top: 20px;
+            margin-top: 40px;
             font-size: 14px;
             color: gray;
             text-align: center;
+            padding-bottom: 20px;
         }
 
-        /* Optional: make it stack on small screens */
+        /* Mobile Responsiveness */
         @media (max-width: 600px) {
             .container {
                 grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo-row">
-            <img src="https://covid19.sph.hku.hk/images/hkusph_b.png" alt="HKU SPH Logo" class="logo">
-        </div>
-
-        <div class="divider"></div>
-
-        <h1 class="title">Osteoarthritis Online Resources</h1>
+        <img src="https://covid19.sph.hku.hk/images/hkusph_b.png" alt="HKU SPH Logo" class="logo">
+        <div class="header-divider"></div>
+        <h1>Osteoarthritis Online Resources</h1>
     </div>
 
     <div class="container">
-        <a href="https://www.elderly.gov.hk/english/education_and_media_resources/files/ham/Osteoarthritis_of_Knee_Joint_Care_and_Exercise_EN_W3C.pdf" class="box yellow">
-            Department of Health
-        </a>
-
-        <a href="https://www3.ha.org.hk/ntwc/msc/docs/pep/22_23/%E7%89%A9%E8%86%9D%E8%89%AF%E6%A9%9F%20%E9%81%8B%E5%8B%95%E6%9C%89%E6%B3%95.pdf" class="box pink">
-            Hospital Authority
-        </a>
-
-        <a href="https://www.labour.gov.hk/eng/public/oh/Knee_06%20Leaflet.pdf" class="box blue">
-            Labour Department
-        </a>
-
-        <a href="https://www.hkarf.org/rheumatic_diseases/osteoarthritis/" class="box green">
-            Hong Kong Arthritis & Rheumatism Foundation
-        </a>
+        <a href="https://www.elderly.gov.hk/english/education_and_media_resources/files/ham/Osteoarthritis_of_Knee_Joint_Care_and_Exercise_EN_W3C.pdf" class="box" target="_blank">Department of Health</a>
+        <a href="https://www3.ha.org.hk/ntwc/msc/docs/pep/22_23/%E7%89%A9%E8%86%9D%E8%89%AF%E6%A9%9F%20%E9%81%8B%E5%8B%95%E6%9C%89%E6%B3%95.pdf" class="box" target="_blank">Hospital Authority</a>
+        <a href="https://www.labour.gov.hk/eng/public/oh/Knee_06%20Leaflet.pdf" class="box" target="_blank">Labour Department</a>
+        <a href="https://www.hkarf.org/rheumatic_diseases/osteoarthritis/" class="box" target="_blank">Hong Kong Arthritis & Rheumatism Foundation</a>
     </div>
 
     <footer>
