@@ -9,6 +9,17 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .logo {
+            height: 60px;
+            margin-bottom: 15px;
+        }
         .container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -31,7 +42,10 @@
     </style>
 </head>
 <body>
-    <h1>Osteoarthritis Online Resources</h1>
+    <div class="header">
+        <img src="https://covid19.sph.hku.hk/images/hkusph_b.png" alt="HKU SPH Logo" class="logo">
+        <h1>Osteoarthritis Online Resources</h1>
+    </div>
     <div class="container">
         <a href="https://www.elderly.gov.hk/english/education_and_media_resources/files/ham/Osteoarthritis_of_Knee_Joint_Care_and_Exercise_EN_W3C.pdf" class="box">Department of Health</a>
         <a href="https://www3.ha.org.hk/ntwc/msc/docs/pep/22_23/%E7%89%A9%E8%86%9D%E8%89%AF%E6%A9%9F%20%E9%81%8B%E5%8B%95%E6%9C%89%E6%B3%95.pdf" class="box">Hospital Authority</a>
