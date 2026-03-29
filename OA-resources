@@ -33,10 +33,10 @@
 <body>
     <h1>Osteoarthritis Online Resources</h1>
     <div class="container">
-        <a href="https://www.health.gov.hk/en/" class="box">Department of Health</a>
-        <a href="https://www.ha.org.hk/" class="box">Hospital Authority</a>
-        <a href="https://www.labour.gov.hk/" class="box">Labour Department</a>
-        <a href="https://www.hkarf.org/" class="box">Hong Kong Arthritis & Rheumatism Foundation</a>
+        <a href="https://www.elderly.gov.hk/english/education_and_media_resources/files/ham/Osteoarthritis_of_Knee_Joint_Care_and_Exercise_EN_W3C.pdf" class="box">Department of Health</a>
+        <a href="https://www3.ha.org.hk/ntwc/msc/docs/pep/22_23/%E7%89%A9%E8%86%9D%E8%89%AF%E6%A9%9F%20%E9%81%8B%E5%8B%95%E6%9C%89%E6%B3%95.pdf" class="box">Hospital Authority</a>
+        <a href="https://www.labour.gov.hk/eng/public/oh/Knee_06%20Leaflet.pdf" class="box">Labour Department</a>
+        <a href="https://www.hkarf.org/rheumatic_diseases/osteoarthritis/" class="box">Hong Kong Arthritis & Rheumatism Foundation</a>
     </div>
     <footer>
         HKU MBBS Year 4 Students 2026
