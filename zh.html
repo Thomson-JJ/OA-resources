@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網上資源 - 退化性關節炎</title>
+    <style>
+        body {
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+        }
+
+        .lang-btn {
+            text-decoration: none;
+            color: #333;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #f0f0f0;
+            border-color: #999;
+        }
+
+        .lang-btn.active {
+            background-color: #333;
+            color: white;
+            border-color: #333;
+            cursor: default;
+        }
+
+        .header-divider {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .hint-text {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .box {
+            aspect-ratio: 1 / 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            text-decoration: none;
+            color: black;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .box:nth-child(1) { background-color: #FFF9C4; }
+        .box:nth-child(2) { background-color: #FFCDD2; }
+        .box:nth-child(3) { background-color: #BBDEFB; }
+        .box:nth-child(4) { background-color: #C8E6C9; }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            filter: brightness(0.95);
+        }
+
+        .box:active {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            .box {
+                font-size: 16px;
+            }
+            .header-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-row">
+            <img src="https://covid19.sph.hku.hk/images/hkusph_b.png" alt="HKU SPH Logo" class="logo">
+            <div class="lang-switch">
+                <a href="index.html" class="lang-btn">Eng</a>
+                <span class="lang-btn active">中</span>
+            </div>
+        </div>
+        <div class="header-divider"></div>
+        <h1>網上資源 - 退化性關節炎</h1>
+        <p class="hint-text">點擊下方資源以了解更多</p>
+    </div>
+
+    <div class="container">
+        <a href="https://www.elderly.gov.hk/english/education_and_media_resources/files/ham/Osteoarthritis_of_Knee_Joint_Care_and_Exercise_EN_W3C.pdf" class="box" target="_blank">衛生署</a>
+        <a href="https://www3.ha.org.hk/ntwc/msc/docs/pep/22_23/%E7%89%A9%E8%86%9D%E8%89%AF%E6%A9%9F%20%E9%81%8B%E5%8B%95%E6%9C%89%E6%B3%95.pdf" class="box" target="_blank">醫院管理局</a>
+        <a href="https://www.labour.gov.hk/eng/public/oh/Knee_06%20Leaflet.pdf" class="box" target="_blank">勞工處</a>
+        <a href="https://www.hkarf.org/rheumatic_diseases/osteoarthritis/" class="box" target="_blank">香港風濕病基金會</a>
+    </div>
+
+    <footer>
+        由香港大學醫學院四年級醫學生編製。2026年。
+    </footer>
+</body>
+</html>
